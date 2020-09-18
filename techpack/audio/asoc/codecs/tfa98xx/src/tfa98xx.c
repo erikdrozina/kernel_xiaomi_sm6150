@@ -402,6 +402,16 @@ int send_tfa_cal_apr(void *buf, int cmd_size, bool bRead)
 }
 #endif
 
+#ifdef TFA_NON_DSP_SOLUTION
+extern int send_tfa_cal_apr(void *buf, int cmd_size, bool bRead);
+#else
+int send_tfa_cal_apr(void *buf, int cmd_size, bool bRead)
+{
+	pr_info("this function is empty!!!\n");
+	return 0;
+}
+#endif
+
 #ifdef CONFIG_DEBUG_FS
 /* OTC reporting
  * Returns the MTP0 OTC bit value
