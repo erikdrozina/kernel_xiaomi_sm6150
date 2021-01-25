@@ -2286,17 +2286,19 @@ static long fuse_dev_ioctl(struct file *file, unsigned int cmd,
 {
 	int res;
 	int oldfd;
-	struct fuse_dev *fud;
-	struct fuse_passthrough_out pto;
-	switch (cmd) {
-	case FUSE_DEV_IOC_CLONE:
+	struct fuse_dev *fud = NULL;
+
+	if (_IOC_TYPE(cmd) != FUSE_DEV_IOC_MAGIC)
+		return -EINVAL;
+
+	switch (_IOC_NR(cmd)) {
+	case _IOC_NR(FUSE_DEV_IOC_CLONE):
 		res = -EFAULT;
 		if (!get_user(oldfd, (__u32 __user *)arg)) {
 			struct file *old = fget(oldfd);
+
 			res = -EINVAL;
 			if (old) {
-				fud = NULL;
-
 				/*
 				 * Check against file->f_op because CUSE
 				 * uses the same ioctl handler.
