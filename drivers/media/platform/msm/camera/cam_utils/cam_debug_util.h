@@ -96,7 +96,7 @@ static inline const char *cam_get_module_name(unsigned int module_id)
  * @fmt      :  Formatted string which needs to be print in log
  * @args     :  Arguments which needs to be print in log
  */
-#define CAM_ERR(__module, fmt, args...)                            \
+#define CAM_ERR(__module, fmt, args...) \
 	cam_debug_log(__module, __func__, __LINE__, fmt, ##args)
 /*
  * CAM_WARN
@@ -106,7 +106,7 @@ static inline const char *cam_get_module_name(unsigned int module_id)
  * @fmt      :  Formatted string which needs to be print in log
  * @args     :  Arguments which needs to be print in log
  */
-#define CAM_WARN(__module, fmt, args...)                           \
+#define CAM_WARN(__module, fmt, args...) \
 	cam_debug_log(__module, __func__, __LINE__, fmt, ##args)
 /*
  * CAM_INFO
@@ -116,7 +116,7 @@ static inline const char *cam_get_module_name(unsigned int module_id)
  * @fmt      :  Formatted string which needs to be print in log
  * @args     :  Arguments which needs to be print in log
  */
-#define CAM_INFO(__module, fmt, args...)                           \
+#define CAM_INFO(__module, fmt, args...) \
 	cam_debug_log(__module, __func__, __LINE__, fmt, ##args)
 
 /*
@@ -127,7 +127,7 @@ static inline const char *cam_get_module_name(unsigned int module_id)
  * @fmt      :  Formatted string which needs to be print in log
  * @args     :  Arguments which needs to be print in log
  */
-#define CAM_INFO_RATE_LIMIT(__module, fmt, args...)                 \
+#define CAM_INFO_RATE_LIMIT(__module, fmt, args...) \
 	cam_debug_log(__module, __func__, __LINE__, fmt, ##args)
 
 /*
@@ -138,7 +138,7 @@ static inline const char *cam_get_module_name(unsigned int module_id)
  * @fmt      :  Formatted string which needs to be print in log
  * @args     :  Arguments which needs to be print in log
  */
-#define CAM_DBG(__module, fmt, args...)                            \
+#define CAM_DBG(__module, fmt, args...) \
 	cam_debug_log(__module, __func__, __LINE__, fmt, ##args)
 
 /*
