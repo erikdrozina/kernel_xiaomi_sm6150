@@ -44,7 +44,8 @@ make -j$(nproc --all) O=out \
                       NM=llvm-nm \
                       OBJCOPY=llvm-objcopy \
                       OBJDUMP=llvm-objdump \
-                      STRIP=llvm-strip
+                      STRIP=llvm-strip \
+                      LD=ld.lld
 
 echo
 echo "    ____  __          __                  __ __                     __"
