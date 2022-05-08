@@ -1,18 +1,18 @@
 #! /bin/bash
 
-# clone or update Proton Clang and AnyKernel3 if they alreay exists
+# clone or update Azure Clang if it alreay exists
 set -e
 
 echo -e "Start building Phobos Kernel\n"
 
 if [ -r clang ]; then
-    echo "* Proton Clang found! * "
+    echo "* Azure Clang found! * "
     cd clang
     git config pull.rebase false
     cd ..
 else
-    echo "* Proton Clang not found, cloning it now * "
-    git clone --depth=1 https://github.com/kdrag0n/proton-clang.git clang
+    echo "* Azure Clang not found, cloning it now * "
+    git clone --depth=1 https://gitlab.com/Panchajanya1999/azure-clang clang
 fi
 
 KERNEL_DEFCONFIG=tucana_defconfig
