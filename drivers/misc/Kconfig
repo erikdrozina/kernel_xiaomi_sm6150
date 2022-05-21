@@ -621,6 +621,7 @@ config LDO_WL2866D
         This option enables multi ldo wl2866d.
 
 config PERF_HELPER
+	bool
 	default y
 	help
 	  this module support record perf lock history and other perf messages.
