@@ -134,17 +134,6 @@ struct fuse_passthrough {
 	struct cred *cred;
 };
 
-/**
- * Reference to lower filesystem file for read/write operations handled in
- * passthrough mode.
- * This struct also tracks the credentials to be used for handling read/write
- * operations.
- */
-struct fuse_passthrough {
-	struct file *filp;
-	struct cred *cred;
-};
-
 /** FUSE specific file data */
 struct fuse_file {
 	/** Fuse connection for this file */
