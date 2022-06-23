@@ -1,5 +1,6 @@
 /* Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
  * Copyright (C) 2021 XiaoMi, Inc.
+ * Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -16,6 +17,8 @@
 
 #include <linux/thread_info.h>
 #include <linux/sched.h>
+
+#define CAM_IS_NULL_TO_STR(ptr) ((ptr) ? "Non-NULL" : "NULL")
 
 #define CAM_CDM        (1 << 0)
 #define CAM_CORE       (1 << 1)
