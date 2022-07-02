@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/arm64 4.14.282 Kernel Configuration
+# Linux/arm64 4.14.285 Kernel Configuration
 #
 CONFIG_ARM64=y
 CONFIG_64BIT=y
@@ -2422,6 +2422,7 @@ CONFIG_DIAG_OVER_USB=y
 CONFIG_MSM_FASTCVPD=y
 CONFIG_MSM_ADSPRPC=y
 # CONFIG_MSM_RDBG is not set
+CONFIG_RANDOM_TRUST_BOOTLOADER=y
 
 #
 # I2C support
@@ -4821,7 +4822,6 @@ CONFIG_QCOM_DCC_V2=y
 # CONFIG_QTI_NOTIFY_SIDEBAND is not set
 CONFIG_QCOM_SECURE_BUFFER=y
 CONFIG_ICNSS=y
-# CONFIG_ICNSS_DEBUG is not set
 CONFIG_ICNSS_QMI=y
 # CONFIG_CNSS_TIMESYNC is not set
 CONFIG_QCOM_EUD=y
@@ -5362,7 +5362,6 @@ CONFIG_HAVE_ARM_SMCCC=y
 #
 # Tegra firmware driver
 #
-CONFIG_MSM_TZ_LOG=y
 # CONFIG_ACPI is not set
 
 #
